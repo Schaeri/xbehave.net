@@ -14,13 +14,13 @@ namespace Xbehave.Test
                 .Teardown(c => Assert.Same(stepContext, c));
 
             "Then the step context contains metadata about the step"
-                .x(() => Assert.Equal("Xbehave.Test.MetadataFeature.UsingMetadata(text: \"abc\") [01] When I execute a step", (step = stepContext.Step)?.DisplayName));
+                .x(() => Assert.Contains("UsingMetadata(text: \"abc\") [01] When I execute a step", (step = stepContext.Step)?.DisplayName));
 
             "And the step contains metadata about the scenario"
-                .x(() => Assert.Equal("Xbehave.Test.MetadataFeature.UsingMetadata(text: \"abc\")", (scenario = step.Scenario)?.DisplayName));
+                .x(() => Assert.Contains("UsingMetadata(text: \"abc\")", (scenario = step.Scenario)?.DisplayName));
 
             "And the step contains metadata about the scenario outline"
-                .x(() => Assert.Equal("Xbehave.Test.MetadataFeature.UsingMetadata", scenario.ScenarioOutline?.DisplayName));
+                .x(() => Assert.Contains("UsingMetadata", scenario.ScenarioOutline?.DisplayName));
         }
     }
 }

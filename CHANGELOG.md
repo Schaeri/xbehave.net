@@ -1,5 +1,15 @@
 # Changelog
 
+## 2.4.2
+
+### Enhancements
+
+- Upgrade to xUnit.net 2.4.2
+
+### Other
+-  **[BREAKING]** remove netcore 2.1 support
+
+
 ## 2.4.100
 
 ### Enhancements

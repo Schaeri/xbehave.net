@@ -19,4 +19,4 @@ Target(
 
 Target("default", DependsOn("pack", "test"));
 
-await RunTargetsAndExitAsync(args, ex => ex is SimpleExec.NonZeroExitCodeException);
+await RunTargetsAndExitAsync(args, ex => ex is SimpleExec.ExitCodeException);
